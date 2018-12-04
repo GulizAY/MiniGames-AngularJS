@@ -1,0 +1,49 @@
+<h3> {{ title }} </h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <button class="btn btn-primary" ng-click="fetchData()">Fetch Data</button>
+    </div>
+    <div class="col-lg-10">
+
+    </div>
+  </div>
+
+  <div> {{ result }} </div>
+
+  <br />
+
+  <div class="row">
+    <div class="col-auto">
+      <!-- <swapi-planet-list></swapi-planet-list> -->
+      <!-- <p class="alert alert-success"> <strong> {{ datas }} </strong></p> -->
+
+      <div>
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <td> Name </td>
+              <td> Terrain </td>
+              <td> Gravity </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="data in dataPlanets">
+              <td> {{ data.name }} </td>
+              <td> {{ data.terrain }} </td>
+              <td> {{ data.gravity }} </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+    <div class="col-lg-2">
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<div ui-view></div>

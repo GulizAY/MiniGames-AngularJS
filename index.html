@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mini Games AngularJS</title>
+      <!-- Bootstrap CSS -->
+      <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+      <!-- AngularJS -->
+      <script src="assets/lib/angular.min.js"></script>
+      <script src="assets/lib/angular-ui-router.js"></script>
+
+  </head>
+  <body ng-app="rootApp">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Games</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" ui-sref="minesweeper">Minesweeper <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="memoryMatch">Memory Match</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="#">ComingSoon</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="swapi">SWAPI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="crud">CRUD</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr>
+    <div class="container-fluid">
+      <div class="gameArea" ui-view></div> 
+    </div>  
+    
+    <!-- For AngularJS Project's Scripts -->
+    <!-- Angular Modules -->
+	  <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/app.routes.js"></script>
+    <script type="text/javascript" src="app/components/minesweeper/minesweeper.controller.js"></script>
+    <script type="text/javascript" src="app/components/memory-match/memory-match.controller.js"></script>
+    <script type="text/javascript" src="app/components/swapi/swapi.controller.js"></script>
+
+    <!-- Angular Components -->
+    <script type="text/javascript" src="app/components/minesweeper/board/minesweeper-board.component.js"></script>
+    <script type="text/javascript" src="app/components/memory-match/board/memory-match-board.component.js"></script>
+    <script type="text/javascript" src="app/components/swapi/list/swapi-planet-list.component.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+<div>
+  <table border="1">
+      <tr ng-repeat="card in $ctrl.memoryMatchBoard.cards">
+          <td ng-repeat="prop in card.props">
+              <!-- {{prop.isCovered}} -->
+              <button id="{{prop.id}}" style="width: 50px; height: 50px;" class="btn btn-default" ng-click="$ctrl.cardClick(prop)">
+                <!-- <img ng-src="{{prop.isCovered && 'assets/img/emoji.jpg' || 'assets/img/emoji/' + prop.emojiName }} " width="30" height="40" /> -->
+                <img ng-src="{{prop.imgSrc}} " width="30" height="40" />
+              </button>
+          </td>
+      </tr>
+  </table>
+</div>

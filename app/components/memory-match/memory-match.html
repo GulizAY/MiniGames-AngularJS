@@ -1,0 +1,28 @@
+<h3> {{ title }} </h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <button class="btn btn-primary" ng-click="newGame()">New Game</button>
+    </div>
+    <div class="col-lg-10">
+
+    </div>
+  </div>
+
+  <br/>
+  
+  <div class="row">
+    <div class="col-auto">
+      <memory-match-board></memory-match-board>
+    </div>
+    <div class="col-lg-2">
+      <p> <b>Score: </b> {{ score }} </p>
+    </div>
+    <div class="col-lg-2">
+      <p class="alert alert-success"> <strong ng-model='message'>  {{ message }} </strong></p>
+    </div>
+  </div>
+</div>
+
+<div ui-view> </div>

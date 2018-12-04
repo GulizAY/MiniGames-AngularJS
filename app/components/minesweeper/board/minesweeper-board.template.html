@@ -1,0 +1,11 @@
+
+<div>
+  <table border="1">
+      <tr ng-repeat="row in $ctrl.minesweeperBoard.rows">
+          <td ng-repeat="prop in row.props">
+              <!-- {{prop.isCovered}} -->
+              <button style="width: 40px; height: 40px;" class="btn btn-{{prop.colorClass}}" ng-click="$ctrl.mineClick(prop)"> </button>
+          </td>
+      </tr>
+  </table>
+</div>
