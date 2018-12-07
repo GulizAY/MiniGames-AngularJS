@@ -1,0 +1,23 @@
+<h3> {{ title }} </h3>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-lg-2">
+      <button class="btn btn-primary" ng-click="newGame()">New Game</button>
+    </div>
+    <div class="col-lg-10">
+    </div>
+  </div>
+
+  <br />
+
+  <div class="row">
+    <div class="col-auto">
+      <snake-board></snake-board>
+    </div>
+  </div>
+
+</div>
+
+<div ui-view></div>

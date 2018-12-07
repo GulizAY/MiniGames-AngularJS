@@ -1,6 +1,6 @@
 angular.module('routerApp',['ui.router'])
  .config(function($stateProvider, $urlRouterProvider) {
-   $urlRouterProvider.otherwise('/');
+   $urlRouterProvider.otherwise('/minesweeper');
    $stateProvider
     .state('minesweeper', {
       url: '/minesweeper',
@@ -16,5 +16,10 @@ angular.module('routerApp',['ui.router'])
       url: '/swapi',
       templateUrl: 'app/components/swapi/swapi.html',
       controller: 'swapiCtrl'
+    })
+    .state('snake', {
+      url: '/snake',
+      templateUrl: 'app/components/snake/snake.html',
+      controller: 'snakeCtrl'
     })
  })
