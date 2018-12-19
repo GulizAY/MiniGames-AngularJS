@@ -71,6 +71,6 @@ angular.module('snakeApp')
   .component('snakeBoard', {
     templateUrl: 'app/components/snake/board/snake-board.template.html',
     controller: function snakeBoardCtrl($scope) {
-      this.snakeBoard = createSnakeBoard($scope);
+      createSnakeBoard($scope);
     }
   })
